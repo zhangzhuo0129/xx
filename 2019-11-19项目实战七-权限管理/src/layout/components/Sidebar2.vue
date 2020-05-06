@@ -1,0 +1,56 @@
+<template>
+    <el-aside width="200px">
+        <el-menu router
+            class="el-menu-vertical-demo"
+            background-color="#545c64"
+            text-color="#fff"
+            active-text-color="#ffd04b">
+            <el-menu-item index="/home">
+                <i class="el-icon-location"></i><span slot="title">首页</span>
+            </el-menu-item>
+            
+            <el-menu-item index="/loan-input/index">
+                <i class="el-icon-menu"></i><span slot="title">贷款申请</span>
+            </el-menu-item>
+
+            <el-menu-item index="/input-manager/index">
+                <i class="el-icon-setting"></i><span slot="title">申请管理</span>
+            </el-menu-item>
+
+            <el-submenu index="4">
+                <template slot="title">
+                    <i class="el-icon-location"></i><span>贷款审批</span>
+                </template>
+                <el-menu-item index="/loan-approve/first">初审</el-menu-item>
+                <el-menu-item index="/loan-approve/end">终审</el-menu-item>
+            </el-submenu>
+
+            <el-menu-item index="/contract/index">
+                <i class="el-icon-setting"></i><span slot="title">标的管理</span>
+            </el-menu-item>
+
+            <el-submenu index="6">
+                <template slot="title">
+                    <i class="el-icon-location"></i><span>权限管理</span>
+                </template>
+                <el-menu-item index="/permission/create">创建管理员</el-menu-item>
+                <el-menu-item index="/permission/list">列表展示</el-menu-item>
+            </el-submenu>
+        </el-menu>
+    </el-aside>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      
+    }
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style  lang="scss">
+
+</style>
